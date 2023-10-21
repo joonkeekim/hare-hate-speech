@@ -1,0 +1,11 @@
+transformers
+datasets
+accelerate
+openai
+backoff
+Counter
+evaluate
+rouge_score
+wandb
+scikit-learn
+deepspeed
