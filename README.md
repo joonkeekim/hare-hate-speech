@@ -1,5 +1,5 @@
 # 🐰 HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning
-Official repository for our findings of EMNLP 2023: [HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning](arxiv_link), by
+Official repository for our Findings of EMNLP 2023: [HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning](arxiv_link), by
 
 Yongjin Yang*, Joonkee Kim*, Yujin Kim*, Namgyu Ho, James Throne, Se-Young Yun.
 (\*:equal contribution)
@@ -17,8 +17,11 @@ Analysis demonstrates that our method enhances the explanation quality of traine
 
 ## Run experiments
 ### Data generation by LLM (with OpenAI API)
-- Prepare the 
-- You can either download datas for training in [here](https://www.dropbox.com/s/n19sur1xkozfn90/sbic_results.json?dl=0). 
+- Prepare the data, then
+```
+source scripts/request_api.sh
+```
+- You can either download datas for training in [here](https://www.dropbox.com/scl/fo/axfydiofwwrgg9yc2o3cr/h?rlkey=swkz7awss3i8h3utnbibp336q&dl=0). 
 
 ### Fine-Tuning
 -  You should have a directory structure as follows:
