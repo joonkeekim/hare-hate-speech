@@ -1,5 +1,5 @@
 # 🐰 HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning
-Official repository for our Findings of EMNLP 2023: [HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning]([arxiv_link](https://arxiv.org/abs/2311.00321)), by
+Official repository for our Findings of EMNLP 2023: [HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning](https://arxiv.org/abs/2311.00321), by
 
 Yongjin Yang*, Joonkee Kim*, Yujin Kim*, Namgyu Ho, James Throne, Se-Young Yun.
 (\*:equal contribution)
