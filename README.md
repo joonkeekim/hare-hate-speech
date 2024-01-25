@@ -1,30 +1,40 @@
 # 🐰 HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning
+
 Official repository for our Findings of EMNLP 2023: [HARE: Explainable Hate Speech Detection with Step-by-Step Reasoning](https://arxiv.org/abs/2311.00321), by
 
-Yongjin Yang*, Joonkee Kim*, Yujin Kim*, Namgyu Ho, James Throne, Se-Young Yun.
+Yongjin Yang*, Joonkee Kim*, Yujin Kim*, Namgyu Ho, James Thorne, Se-Young Yun.
 (\*:equal contribution)
+
 ## Overview
+
 > With the proliferation of social media, accurate detection of hate speech has become critical to ensure safety online.
-To combat nuanced forms of hate speech, it is important to identify and thoroughly explain hate speech to help users understand its harmful effects.
-Recent benchmarks have attempted to tackle this issue by training generative models on free-text annotations of implications in hateful text.
-However, we find significant reasoning gaps in the existing annotations schemes, which may hinder the supervision of detection models.
-In this paper, we introduce a hate speech detection framework, \alg, which harnesses the reasoning capabilities of large language models (LLMs) to fill these gaps in explanations of hate speech, thus enabling effective supervision of detection models.
-Experiments on SBIC and Implicit Hate benchmarks show that our method, using model-generated data, consistently outperforms baselines, using existing free-text human annotations.
-Analysis demonstrates that our method enhances the explanation quality of trained models and improves generalization to unseen datasets.
+> To combat nuanced forms of hate speech, it is important to identify and thoroughly explain hate speech to help users understand its harmful effects.
+> Recent benchmarks have attempted to tackle this issue by training generative models on free-text annotations of implications in hateful text.
+> However, we find significant reasoning gaps in the existing annotations schemes, which may hinder the supervision of detection models.
+> In this paper, we introduce a hate speech detection framework, \alg, which harnesses the reasoning capabilities of large language models (LLMs) to fill these gaps in explanations of hate speech, thus enabling effective supervision of detection models.
+> Experiments on SBIC and Implicit Hate benchmarks show that our method, using model-generated data, consistently outperforms baselines, using existing free-text human annotations.
+> Analysis demonstrates that our method enhances the explanation quality of trained models and improves generalization to unseen datasets.
+
 <p align="center">
   <img src="./figures/overview.png" width="450"/>
 </p>
 
 ## Run experiments
+
 ### Data generation by LLM (with OpenAI API)
+
 - Prepare the data, then
+
 ```
 source scripts/request_api.sh
 ```
-- You can either download datas for training in [here](https://www.dropbox.com/scl/fo/axfydiofwwrgg9yc2o3cr/h?rlkey=swkz7awss3i8h3utnbibp336q&dl=0). 
+
+- You can either download datas for training in [here](https://www.dropbox.com/scl/fo/axfydiofwwrgg9yc2o3cr/h?rlkey=swkz7awss3i8h3utnbibp336q&dl=0).
 
 ### Fine-Tuning
--  You should have a directory structure as follows:
+
+- You should have a directory structure as follows:
+
 ```
 HARE
 ├── data
@@ -53,20 +63,29 @@ HARE
 └── ...
 
 ```
+
 ### Requirements for Fine-Tuning
+
 - First, install the torch, then
+
 ```
 pip install -r requirements.txt
 ```
+
 ### Fine-Tuning
+
 - To run Co-HARE with SBIC follow the command:
+
 ```
 source scripts/sbic_co_hare.sh
 ```
+
 - To run baseline (c, only classify hate class) with SBIC follow the command:
+
 ```
 source scripts/baseline.sh
 ```
+
 Some important arguments in script:
 
 - `reasoning` : If it is set to True, Fr-HARE or Co-HARE depend on the file path.
